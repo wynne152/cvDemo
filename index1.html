@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>个人主页</title>
+		<!--<link rel="stylesheet" href="css/animation.css" />-->
+		<link rel="stylesheet" href="css/style.css" />
+		<script>
+		/*
+			window.onload=function(){
+				var stop_button=document.getElementById("stop_button");
+				var left_box=document.getElementsByClassName("left_box")[0];
+				var right_box=document.getElementsByClassName("right_box")[0];			
+				stop_button.onclick=function(){
+					left_box.className="left_box_1 animate_img";
+					right_box.className="right_box_1 animate_img";
+					setTimeout(function(){stop_button.parentNode.removeChild(stop_button)},500);//按钮删除
+				}
+			}
+			*/
+		</script>
+	</head>
+	<body>
+		<!--<div class="left_box animate_img"></div>
+		<div class="right_box animate_img"></div>
+		<input type="button" value="test" id="stop_button" class="stop_button"/>-->
+		<!--标签，浮动-->
+		<nav>
+			<ul>
+				<li class="active"><a href="#page1">技术相关</a></li>
+				<li><a href="#page2">关于我</a></li>
+				<li><a href="#page3">个人简介</a></li>
+				<li><a href="#page4">实习经历</a></li>
+				<li><a href="#page5">个人Demo</a></li>
+			</ul>
+		</nav>
+		<header id="main_page" class="main_page">
+			<div id="main_page_box" class="main_page_box">
+				<h1>肖艺琬</h1>
+				<hr />
+				<h3>
+					邮箱:<span>515839502@qq.com</span>&nbsp;
+					手机:<span>17310242054</span>
+				</h3>
+			</div>
+		</header><!--end header#main_page -->
+		
+		<section class="page" id="page1">
+			<div class="page_box" >
+				<p>熟悉html、css，能独立完成静态页面的布局<br />
+					熟悉javascript、ajax、jquery等技术<br />
+					了解jsp、php、mysql等后端技术，能够完成基础的数据库操作，进行简单的前后端交互<br />
+					还接触过其他编程语言，目前主攻javascript
+				</p>
+			</div>
+		</section>
+		<section class="page" id="page2">
+			<div class="page_box" >
+				<h2>关于我</h2>
+				<hr  />
+				<p>就读于北京林业大学<br />
+					大四<br />
+					学历：本科
+					年龄：20岁
+					籍贯：湖北
+					坐标：北京
+				</p>
+			</div>
+		</section>
+		<section class="page" id="page3">
+			<div class="page_box" >
+				<p>一个目标明确的90后，知道自己想干什么，知道自己想要什么<br />
+					工作对我来说不仅仅是生存的手段，还能获得乐趣和成就感<br />
+					兴趣广泛，会点日语，还会点数码绘，没事喜欢玩玩手工<br />
+				</p>
+			</div>
+		</section>
+		<section class="page" id="page4">
+			<div class="page_box" >
+				<p><h4>华瑞制药有限公司&nbsp;2016年5月至2016年9月</h4><br />
+						<h5>一个人担任前端的任务，配合后台人员完成开发任务</h5>
+					<ul>
+						<li>独立完成公司内部微信平台的一组静态页面</li>
+						<li>完成公司管理平台的前端界面，与后台衔接</li>
+						<li>实现html5 app的界面改版及一些功能</li>
+						<li>数据库的维护</li>
+						<li>接触mysql，jsp后，利用闲余时间自学前端和后端知识</li>
+					</ul>
+				</p>
+			</div>
+		</section>
+		<section class="page" id="page5">
+			<div class="page_box" >
+				<p>
+					练习demo(php,ajax,mysql):
+					http://www.wynne.890m.com/japanese/index.php
+				</p>
+			</div>
+		</section>
+		<aside>
+			<li class="aside_active" onclick="javascript:document.getElementById('00').click();"><a id="00" href="#main_page"></a></li>
+			<li onclick="javascript:document.getElementById('01').click();"><a id="01" href="#page1"></a></li>
+			<li onclick="javascript:document.getElementById('02').click();"><a id="02" href="#page2"></a></li>
+			<li onclick="javascript:document.getElementById('03').click();"><a id="03" href="#page3"></a></li>
+			<li onclick="javascript:document.getElementById('04').click();"><a id="04" href="#page4"></a></li>
+			<li onclick="javascript:document.getElementById('05').click();"><a id="05" href="#page5"></a></li>
+		</aside>
+	</body>
+</html>

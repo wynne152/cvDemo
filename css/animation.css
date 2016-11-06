@@ -1,0 +1,156 @@
+
+.stop_button{
+	width:100px;
+	height:100px;
+	display:inline-block;
+	border-radius:50px;
+	border:2px solid #666;
+	position:absolute;
+	top:50%;
+	left:50%; 
+	margin-left:-50px;
+	margin-top:-50px;
+}
+
+.stop_button:hover{
+	border:2px solid #fff;/*颜色*/
+}
+
+.animate_img{
+width:50%;
+height:100%;
+background:red;
+position:absolute;
+}
+
+.left_box
+{
+animation:leftImage 1s;
+-moz-animation:leftImage 1s; /* Firefox */
+-webkit-animation:leftImage 1s; /* Safari and Chrome */
+-o-animation:leftImage 1s; /* Opera */
+-webkit-animation-fill-mode:forwards; /*动画停在最后*/
+}
+
+@keyframes leftImage
+{
+0%   {left:-50%;}
+100% {left:0;}
+}
+
+@-moz-keyframes leftImage /* Firefox */
+{
+0%   {left:-50%;}
+100% {left:0;}
+}
+
+@-webkit-keyframes leftImage /* Safari and Chrome */
+{
+0%   {left:-50%;}
+100% {left:0;}
+}
+
+@-o-keyframes leftImage /* Opera */
+{
+0%   {left:-50%;}
+100% {left:0;}
+}
+
+.right_box
+{
+animation:rightImage 1s;
+-moz-animation:rightImage 1s; /* Firefox */
+-webkit-animation:rightImage 1s; /* Safari and Chrome */
+-o-animation:rightImage 1s; /* Opera */
+-webkit-animation-fill-mode:forwards; /*动画停在最后*/
+}
+
+@keyframes rightImage
+{
+0%   { left:100%; }
+100% { left:50%; }
+}
+
+@-moz-keyframes rightImage /* Firefox */
+{
+0%   { left:100%; }
+100% { left:50%; }
+}
+
+@-webkit-keyframes rightImage /* Safari and Chrome */
+{
+0%   { left:100%; }
+100% { left:50%; }
+}
+
+@-o-keyframes rightImage /* Opera */
+{
+0%   { left:100%; }
+100% { left:50%; }
+}
+
+.left_box_1
+{
+animation:leftImage1 1s;
+-moz-animation:leftImage1 1s; /* Firefox */
+-webkit-animation:leftImage1 1s; /* Safari and Chrome */
+-o-animation:leftImage1 1s; /* Opera */
+-webkit-animation-fill-mode:forwards; /*动画停在最后*/
+}
+
+@keyframes leftImage1
+{
+0%   {left:0%;}
+100% {left:-50%;}
+}
+
+@-moz-keyframes leftImage1 /* Firefox */
+{
+0%   {left:0%;}
+100% {left:-50%;}
+}
+
+@-webkit-keyframes leftImage1 /* Safari and Chrome */
+{
+0%   {left:0%;}
+100% {left:-50%;}
+}
+
+@-o-keyframes leftImage1 /* Opera */
+{
+0%   {left:0%;}
+100% {left:-50%;}
+}
+
+.right_box_1
+{
+animation:rightImage1 1s;
+-moz-animation:rightImage1 1s; /* Firefox */
+-webkit-animation:rightImage1 1s; /* Safari and Chrome */
+-o-animation:rightImage1 1s; /* Opera */
+-webkit-animation-fill-mode:forwards; /*动画停在最后*/
+}
+
+@keyframes rightImage1
+{
+0%   { left:50%; }
+100% { left:100%; }
+}
+
+@-moz-keyframes rightImage1 /* Firefox */
+{
+0%   { left:50%; }
+100% { left:100%; }
+}
+
+@-webkit-keyframes rightImage1 /* Safari and Chrome */
+{
+0%   { left:50%; }
+100% { left:100%; }
+}
+
+@-o-keyframes rightImage1 /* Opera */
+{
+0%   { left:50%; }
+100% { left:100%; }
+}

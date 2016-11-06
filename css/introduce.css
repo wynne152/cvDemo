@@ -1,0 +1,168 @@
+#introduce{
+	background:rgb(45,48,53) no-repeat;
+	height:100%;
+	background-size:100% 100%;
+}
+.introduce{
+	overflow:hidden;
+	width:70%;
+	height:100%;
+	color:#fff;
+	padding-top:80px;
+	margin:0 auto;
+	/*perspective 属性指定了观察者与z=0平面的距离，使具有三维位置变换的元素产生透视效果。z>0的三维元素比正常大，而z<0时则比正常小，大小程度由该属性的值决定。默认情况下，消失点位于元素的中心，但是可以通过设置perspective-origin属性来改变其位置。*/
+	-webkit-perspective:1000px;
+    -moz-perspective:1000px;
+    -ms-perspective:1000px;
+    perspective:1000px;
+    position:relative;
+}
+
+.book{
+	/*transform-style属性指定了，该元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化。*/
+	position:absolute;
+	width:400px;
+	height:400px;
+	left:50%;
+	top:50%;
+	margin-top:-200px;
+	margin-left:-100px;
+	background:#212121;
+	-webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.pages{
+	width:300px;
+	height:400px;
+	background:#FFFF99;
+	position:absolute;
+	border:1px solid #000;
+	color:#0F0F0F;
+}
+/*书页*/
+.page{
+	background: -moz-repeating-linear-gradient(top,#fcf59b,#fcf59b 29px,#81cbbc 30px);
+	background: -webkit-gradient(linear,left top, left bottom,from(#81cbbc),color-stop(2%, #fcf59b));
+	background: repeating-linear-gradient(top,#fcf59b,#fcf59b 29px,#81cbbc 30px);		
+	-webkit-background-size: 100% 30px;
+}
+.page1{z-index:9;}
+.page2{z-index:8;}
+.page3{z-index:7;}
+.page2 span,.page3 span{
+	position:absolute;
+	top:50px;
+	margin:10px;
+	line-height:30px;
+	text-indent:32px;
+}
+/*书页文本*/
+.page_text{
+	transition:color 1s;
+}
+/*翻书后隐藏前面文字*/
+.text_hide{
+	color:transparent;
+}
+/*便利贴*/
+.sign{
+	transition:opacity 2s;
+	display:inline-block;
+	margin-left:75px;
+	margin-top:75px;
+	width:120px;
+	height:125px;
+	background:lightblue;
+	transform:rotate(-20deg);
+	padding:30px;
+	position:relative;
+}
+.sign:before{
+	display:inline-block;
+	content:"";
+	position:absolute;
+	width:80px;
+	height:25px;
+	top:-15px;
+	left:45px;
+	transform:rotate(25deg);
+    border: 1px solid rgba(200, 200, 200,0.8);
+    background: rgba(254, 254, 254,0.6);
+}
+.sign span{
+	font-family:"楷体";
+}
+/*封面*/
+.cover{
+	z-index:10;
+	background:#212121;
+	width:300px;
+	color:#fff;
+}
+.cover_anime{
+	color:#212121;
+}
+/*封面文本*/
+.cover span{
+	transition:color 1s;
+	display:inline-block;
+	font-size:45px;
+	width:50px;
+	margin-left:125px;
+	margin-top:50px;
+}
+/*翻书按钮*/
+.open{
+	transition:color 1s;
+	position:absolute;
+	left:275px;
+	top:20px;
+	width:60px;
+	height:25px;
+	background:darkred;
+	z-index:100;
+	cursor:pointer;
+}
+/*翻书按钮三角*/
+.triangle{
+	transition:border-right-color 2s; 
+	border:12.5px solid #212121;
+	border-color:transparent #212121 transparent transparent;
+	width:0;
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	right:0;
+}
+.triangle_anime{
+	border-right-color:rgb(45,48,53);
+}
+
+/*动画：book-翻书动画*/
+.coverBook{
+	animation:book 3s;
+	-webkit-animation:book 3s;
+	-moz-animation:book 3s;
+	-o-animation:book 3s;
+	animation-fill-mode:forwards;/*动画停在最后*/
+	-webkit-animation-fill-mode:forwards; 
+}
+@keyframes book{
+	0%{transform: rotateY(0deg);transform-origin:0px;}
+	100%{transform: rotateY(-180deg);transform-origin:0px;}
+}
+
+@-webkit-keyframes book{
+	0%{transform: rotateY(0deg);transform-origin:0px;}
+	100%{transform: rotateY(-180deg);transform-origin:0px;}
+}
+@-moz-keyframes book{
+	0%{transform: rotateY(0deg);transform-origin:0px;}
+	100%{transform: rotateY(-180deg);transform-origin:0px;}
+}
+@-o-keyframes book{
+	0%{transform: rotateY(0deg);transform-origin:0px;}
+	100%{transform: rotateY(-180deg);transform-origin:0px;}
+}
